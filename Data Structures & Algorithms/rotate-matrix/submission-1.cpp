@@ -1,0 +1,12 @@
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int ROWS = matrix.size();
+        reverse(matrix.begin(), matrix.end());
+        for (int i=0; i<ROWS; i++) {
+            for (int j=i+1; j<ROWS; j++) {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+    }
+};
